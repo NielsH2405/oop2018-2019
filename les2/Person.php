@@ -1,5 +1,16 @@
 <?php
 
+class Group
+{
+    private $group = [];
+
+    public function addGroup($student)
+    {
+        $this->group[] = $student;
+    }
+}
+
+
 class Person
 {
     protected $firstName;
@@ -32,7 +43,12 @@ class Student extends Person
     }
 }
 
+
 $student1 = new Student('Jan', 'Janssen');
 $student1->setNr(4012031);
+
+$group1 = new Group();
+$group1->addGroup($student1);
+
 
 $person1 = new Person('Piet', 'Janssen');
